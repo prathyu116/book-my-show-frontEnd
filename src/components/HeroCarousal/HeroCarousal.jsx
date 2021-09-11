@@ -7,7 +7,7 @@ const HeroCarousal = () => {
     const settingsLG = {
         autoplay:true,
         centerMode: true,
-        centerPadding: '300px',
+        centerPadding: '100px',
         arrows:true,
         infinite: true,
         slidesToShow: 1,
@@ -28,8 +28,7 @@ const HeroCarousal = () => {
         prevArrow:<PrevArrows />,
       };
       const images = [
-          "https://images.unsplash.com/photo-1630736202148-b8808b69100f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-          "https://images.unsplash.com/photo-1631033755448-3e1f43d3cd7f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+          
           "https://images.unsplash.com/photo-1631028353342-9c573a9bc957?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
           "https://images.unsplash.com/photo-1593642532400-2682810df593?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
           "https://images.unsplash.com/photo-1552083375-1447ce886485?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"

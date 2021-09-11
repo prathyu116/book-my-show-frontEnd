@@ -1,6 +1,12 @@
 import React from 'react';
-import temp from './components/temp';
+//Hoc
 import DefaultHoc from './Hoc/DefaultHoc';
+
+//pages
+import HomePages from './Pages/HomePages';
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './App.css'
 //HoC
 
@@ -8,10 +14,11 @@ import './App.css'
 const App = () => {
   return (
     <>
-     <DefaultHoc path="/" exact component={temp} />
+     <DefaultHoc path="/" exact component={HomePages} />
      
-    </>
+     </>
+    
   )
 }
 
-export default App
+export default App;
