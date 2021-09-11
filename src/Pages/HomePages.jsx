@@ -1,6 +1,7 @@
 import React from 'react'
 import Entertainment from '../components/Entertainment/Entertainment';
-import Premier from '../components/Premier/Premier';
+import Premier from '../components/PosterSlider/PosterSlider';
+import PremierImage from '../config/TempPosters';
 
 const HomePages = () => {
     return (
@@ -20,12 +21,7 @@ const HomePages = () => {
            
         </div>
         <div className="bg-hi-700 py-16">
-            {/* <div className="flex">
-                <img src="https://in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-rupay-banner-web-collection-202104230555.png" 
-                className="w-full h-full"
-                alt="rupau" />
-             
-            </div> */}
+            
             <div className="container mx-auto px-4 flex flex-col gap-3">
             <div className="flex">
                 <img src="https://in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-rupay-banner-web-collection-202104230555.png" 
@@ -33,10 +29,14 @@ const HomePages = () => {
                 alt="rupay" />
              
             </div>
-             <Premier />
+            
+             <Premier title="premier" sub="Brand New Release n Friday" images={PremierImage} isDark/>
+            
             </div>
         
         </div>
+        <Premier title="premier" sub="Brand New Release n Friday" isDark={false}/>
+             <Premier title="premier" sub="Brand New Release n Friday" />
         </div>
         </>
     )

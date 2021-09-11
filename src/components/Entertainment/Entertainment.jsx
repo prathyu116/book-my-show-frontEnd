@@ -6,7 +6,7 @@ import { SampleNextArrow, SamplePrevArrow } from '../HeroCarousal/Arrowmain';
 const EntertainmentCard = (props) => {
     return (
         <>
-            <div className=" w-full h-15 px-2">
+            <div className=" w-full h-15 px-5">
                 <img src={props.src} alt="entertainment card" className="w-full h-full rounded-xl" />
             </div>
 
