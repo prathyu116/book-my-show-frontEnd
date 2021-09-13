@@ -1,6 +1,6 @@
 import React from 'react'
 import Entertainment from '../components/Entertainment/Entertainment';
-import Premier from '../components/PosterSlider/PosterSlider';
+import PosterSlider from '../components/PosterSlider/PosterSlider';
 import PremierImage from '../config/TempPosters';
 
 const HomePages = () => {
@@ -30,13 +30,13 @@ const HomePages = () => {
              
             </div>
             
-             <Premier title="premier" sub="Brand New Release n Friday" images={PremierImage} isDark/>
+             <PosterSlider title="premier" sub="Brand New Release n Friday" images={PremierImage} isDark/>
             
             </div>
         
         </div>
-        <Premier title="premier" sub="Brand New Release n Friday" isDark={false}/>
-             <Premier title="premier" sub="Brand New Release n Friday" />
+        <PosterSlider title="premier" sub="Brand New Release n Friday" isDark={false}/>
+             <PosterSlider title="premier" sub="Brand New Release n Friday" />
         </div>
         </>
     )

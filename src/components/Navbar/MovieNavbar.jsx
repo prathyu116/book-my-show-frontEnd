@@ -1,18 +1,16 @@
 import React from 'react';
-import { BiChevronRight, BiSearch,BiMenu,BiChevronDown } from 'react-icons/bi';
-import './NavBar.css'
+import { BiChevronRight, BiSearch,BiMenu,BiChevronDown ,BiChevronLeft,BiShareAlt} from 'react-icons/bi';
+
 const Navsm = () => {
     return (
         <>
             <div className="text-white flex flex-row  items-center justify-between">
                 <div>
                     <h3 className="text-xl font-bold">It All Starts Here!</h3>
-                    <span className="text-gray-400 text-xs flex flex-row  items-center   pk111">
-                        Kanhangad <BiChevronRight />
-                    </span>
+                    
                 </div>
                 <div className="h-8 w-8">
-                    <BiSearch className="h-full w-full" />
+                    <BiShareAlt className="h-full w-full" />
                 </div>
             </div>
         </>
@@ -58,38 +56,37 @@ const Navlg = () => {
         </div>
     )
 };
-
-const Navbar = () => {
+const MovieNavbar = () => {
     return (
         <>
-            <nav className="px-3 py-4 nav">
-                <div className="md:hidden ">
-                    {
-                        // Mobile Screen
-                        <Navsm />
+        <nav className="absolute inset-x-0 z-30 bg-opacity-10 backdrop-filter backdrop-blur-lg lg:relative px-3 py-4 ">
+            <div className="md:hidden ">
+                {
+                    // Mobile Screen
+                    <Navsm />
 
-                    }
+                }
 
-                </div>
-                <div className="hidden lg:hidden md:flex ">
-                    {
-                        // Tablet Screen
-                        <Navmd />
+            </div>
+            <div className="hidden lg:hidden md:block ">
+                {
+                    // Tablet Screen
+                    <Navsm />
 
-                    }
+                }
 
-                </div>
-                <div className="hidden lg:flex">
-                    {
-                        // desktop Screen
-                        <Navlg />
+            </div>
+            <div className="hidden lg:flex">
+                {
+                    // desktop Screen
+                    <Navlg />
 
-                    }
+                }
 
-                </div>
-            </nav>
-        </>
+            </div>
+        </nav>
+    </>
     )
 }
 
-export default Navbar;
+export default MovieNavbar;
