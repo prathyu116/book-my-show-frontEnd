@@ -17,7 +17,7 @@ const MovieHero = () => {
                 <div className="absolute h-full w-full z-10"
                     style={{ backgroundImage: "linear-gradient(90deg, rgb(34, 34, 34) 24.97%, rgb(34, 34, 34) 38.3%, rgba(34, 34, 34, 0.04) 97.47%, rgb(34, 34, 34) 100%)" }}
                 />
-                <div className="absolute z-30 flex left-24 top-10 items-center justify-between">
+                <div className="absolute z-30 flex left-24 top-10 items-start  justify-around gap-5">
                     <div className=" w-64 h-96  ">
                         <img src="https://in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/shang-chi-and-the-legend-of-the-ten-rings-et00122566-24-08-2021-02-01-36.jpg" alt="poster" className="w-hull h-full rounded-lg" />
 
@@ -30,7 +30,7 @@ const MovieHero = () => {
 
                             <span className="text-white text-2xl font-bold">91%</span>
                             <span className="text-white text-2xl ">34.5K  </span>
-                            <a className="text-white text-2xl " href="">rating ></a>
+                            <a className="text-white text-2xl flex flex-row" href="">rating <BiChevronRight /></a>
 
                         </div>
                         <div className="bg-blackish-700 flex items-center justify-between px-2 py-8 rounded-xl" style={{ width: "440px" }}>
@@ -88,13 +88,13 @@ const MovieHero = () => {
                     </div>
                     {/* share button */}
                     <div>
-                    <div className=" flex items-center justify-between  rounded-xl w-64 h-60" style={{backgroundColor:"rgba(0,0,0,0.9)"}}>
-                            <div>
-                            <BiShareAlt className="w-full h-full text-white"/>
-                            </div>
-                            <div>
-                              <p>share</p>
-                            </div>
+                    <div className=" flex items-center justify-evenly rounded-xl w-48 h-16 cursor-pointer" style={{backgroundColor:"rgba(0,0,0,0.5)"}}>
+                          <span>
+                          <BiShareAlt className="w-20 h-8 text-white"/>
+                              </span>
+                           
+                              <p className="text-white text-lg font-bold">Share</p>
+                           
                         </div>
                        
                     </div>
