@@ -1,5 +1,5 @@
 import React from 'react';
-import { BiChevronRight, BiSearch,BiMenu,BiChevronDown ,BiChevronLeft,BiShareAlt} from 'react-icons/bi';
+import { BiChevronRight,BiShareAlt} from 'react-icons/bi';
 
 const MovieHero = () => {
     return (
