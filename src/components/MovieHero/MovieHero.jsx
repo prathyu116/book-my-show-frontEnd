@@ -17,12 +17,12 @@ const MovieHero = () => {
                 <div className="absolute h-full w-full z-10"
                     style={{ backgroundImage: "linear-gradient(90deg, rgb(34, 34, 34) 24.97%, rgb(34, 34, 34) 38.3%, rgba(34, 34, 34, 0.04) 97.47%, rgb(34, 34, 34) 100%)" }}
                 />
-                <div className="absolute z-30 flex left-24 top-10 items-start  justify-around gap-5">
+                <div className="absolute z-30 flex left-12 top-10 items-start  justify-around gap-5">
                     <div className=" w-64 h-96  ">
                         <img src="https://in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/shang-chi-and-the-legend-of-the-ten-rings-et00122566-24-08-2021-02-01-36.jpg" alt="poster" className="w-hull h-full rounded-lg" />
 
                     </div>
-                    <div className="flex flex-col gap-5 w-84">
+                    <div className="flex flex-col gap-5 w-84 -mt-10">
                         <h1 className="  font-bold		 text-white whitespace-normal" style={{ fontSize: "36px", whiteSpace: "initial" }}>Shang-Chi and the Legend of the Ten Rings</h1>
 
                         <div className="flex gap-3">
