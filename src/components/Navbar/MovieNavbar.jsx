@@ -59,7 +59,7 @@ const Navlg = () => {
 const MovieNavbar = () => {
     return (
         <>
-        <nav className="absolute inset-x-0 z-30 bg-opacity-10 backdrop-filter backdrop-blur-lg lg:relative px-3 py-4 ">
+        <nav className="lg:bg-NavCol-700 absolute inset-x-0 z-30 bg-opacity-10 backdrop-filter backdrop-blur-lg lg:relative px-3 py-4 ">
             <div className="md:hidden ">
                 {
                     // Mobile Screen

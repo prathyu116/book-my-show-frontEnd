@@ -30,7 +30,7 @@ const MovieHero = () => {
 
                             <span className="text-white text-2xl font-bold">91%</span>
                             <span className="text-white text-2xl ">34.5K  </span>
-                            <a className="text-white text-2xl flex flex-row" href="">rating <BiChevronRight /></a>
+                            <a className="text-white text-2xl flex flex-row items-center" href="">rating <BiChevronRight /></a>
 
                         </div>
                         <div className="bg-blackish-700 flex items-center justify-between px-2 py-8 rounded-xl" style={{ width: "440px" }}>

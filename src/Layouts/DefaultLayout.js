@@ -6,9 +6,13 @@ const DefaultLayout = (props) => {
     return (
         <>
             <Navbar />
-            <HeroCarousal />
-            {props.children}
-           
+            <div className="bg-gray-200">
+                <HeroCarousal />
+
+                {props.children}
+            </div>
+
+
         </>
     )
 }
