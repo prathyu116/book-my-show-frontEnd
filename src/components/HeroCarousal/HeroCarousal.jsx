@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { NextArrows,PrevArrows } from './Arrows';
 const HeroCarousal = () => {
+    const [images,setImages ]=useState([])
+   
+     useEffect(()=>{
+       const  reqNowPlayMovie = async() => {
+           const getImage = await axios.get("/movie/now_playing");
+          setImages(getImage.data.results);
+
+       }
+       reqNowPlayMovie()
+
+     },[])
+    
     const settingsLG = {
         autoplay:true,
         centerMode: true,
@@ -27,12 +40,7 @@ const HeroCarousal = () => {
         nextArrow:<NextArrows />,
         prevArrow:<PrevArrows />,
       };
-      const images = [
-          
-          "https://images.unsplash.com/photo-1631028353342-9c573a9bc957?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-          "https://images.unsplash.com/photo-1593642532400-2682810df593?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-          "https://images.unsplash.com/photo-1552083375-1447ce886485?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-      ]
+     
     return (
         <>
 {/* show for mediun and small screen */}
@@ -41,8 +49,8 @@ const HeroCarousal = () => {
                 {
                     images.map((image)=>{
                         return (
-                            <div className="w-full h-44 md:h-64 py-2">
-                                <img src={image} alt="images" srcset="" className="w-full h-full rounded-md"/>
+                            <div className="w-full h-44 md:h-64 py-2 ">
+                                <img src={image} alt="images" srcset="" className="w-full h-full rounded-md 	"/>
                             </div>
                         )
                     })
@@ -56,7 +64,7 @@ const HeroCarousal = () => {
                     images.map((image)=>{
                         return (
                             <div className="w-full h-80 px-2 py-3">
-                                <img src={image} alt="images" srcset="" className="w-full h-full rounded-md"/>
+                                <img src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`} alt="images" srcset="" className="w-full h-full rounded-md"/>
                             </div>
                         )
                     })

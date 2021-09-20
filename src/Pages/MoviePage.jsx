@@ -4,7 +4,7 @@ import { BiCameraMovie } from "react-icons/bi";
 import Slider from "react-slick";
 import { SampleNextArrow, SamplePrevArrow } from '../components/HeroCarousal/Arrowmain';
 const MoviePage = () => {
-
+  
     const CastComponet = (props) => {
         return (
             <>

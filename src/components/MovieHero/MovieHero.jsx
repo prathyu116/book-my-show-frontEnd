@@ -1,7 +1,27 @@
 import React from 'react';
 import { BiChevronRight,BiShareAlt} from 'react-icons/bi';
 
+const launchRazorpay = () => {
+    let options = {
+        key:"rzp_test_KOTHbmObx2sshs",
+        amount: 500*100,  // amount in the smallest currency unit
+        currency: "INR",
+        receipt: "order_rcptid_11",
+        name:"Book My Shaw Clone",
+        description:"movie purchase on rent",
+        handler:()=>{
+
+            alert('payment done')
+        },
+        theme:{color:"#c4242d"}
+      };
+      let rzp = new window.Razorpay(options)
+      rzp.open();
+  
+
+   }
 const MovieHero = () => {
+   
     return (
         <>
             <div className="md:hidden" >
@@ -56,7 +76,7 @@ const MovieHero = () => {
                                     {/* <span>,</span>
                         <a href="">4DX</a> */}
                                 </div>
-                                <div className=" flex flex-wrap my-2 font-bold px-1	  bg-gray-50 font-light " style={{ width: "fit-content" }}>
+                                <div className=" flex flex-wrap my-2 font-bold px-1	  bg-gray-50 " style={{ width: "fit-content" }}>
                                     <a className="hover:underline" href="">MALAYALAM</a>
                                     <span>,</span>
                                     <a className="hover:underline" href="">ENGLISH</a>
@@ -81,7 +101,7 @@ const MovieHero = () => {
                                     3 Sep, 2021
                                 </p>
                             </div>
-                            <button class="bg-Button-300 mt-6  text-white font-bold  rounded py-4 px-12">
+                            <button onClick={launchRazorpay} class="bg-Button-300 mt-6  text-white font-bold  rounded py-4 px-12">
                                 Book Tickets
                             </button>
                         </div>
