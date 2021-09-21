@@ -12,7 +12,7 @@ const Premier = (props) => {
     return (
         <>
         <div className="flex flex-col items-start py-4 px-5">
-            <h3 className={` ${props.isDark ? "text-white":"text-gray-700"} text-xl font-bold`}>{props.title}</h3>
+            <h3 className={` ${props.isDark ? "text-white":"text-gray-700"} text-2xl font-bold tracking-wide`}>{props.title}</h3>
             <p className={` ${props.isDark ? "text-white":"text-gray-700"} text-sm`}>{props.sub}</p>
             </div>
             <Slider {...settings}>

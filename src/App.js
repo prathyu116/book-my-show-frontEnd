@@ -25,7 +25,7 @@ const App = () => {
     <>
      <DefaultHoc path="/" exact component={HomePages} />
      <MovieHoc path="/movie/:id" exact component={MoviePage} />
-     <DefaultHoc path="/place" exact component={PlayPage}/>
+     <DefaultHoc path="/plays" exact component={PlayPage}/>
      </>
     
   )

@@ -6,12 +6,26 @@ import PremierImage from '../config/TempPosters';
 
 const HomePages = () => {
     const [popular, setPopular] = useState([]);
+    const [upcoming, setUpcoming] = useState([]);
+    const [topMovie, setTopMovie] = useState([]);
     useEffect(() => {
         const reqPopularMovies = async () => {
             const getPopularMovies = await axios.get("/movie/popular");
             setPopular(getPopularMovies.data.results)
         }
         reqPopularMovies()
+
+        const reqUpcomingMovies = async () => {
+            const getUpcomingMovies = await axios.get("/movie/upcoming");
+            setUpcoming(getUpcomingMovies.data.results)
+        }
+        reqUpcomingMovies()
+
+        const reqTopratedMovie = async () => {
+            const getreqTopratedMovie = await axios.get("/movie/top_rated");
+            setTopMovie(getreqTopratedMovie.data.results)
+        }
+        reqTopratedMovie()
     }, [])
     console.log("{popular}", popular);
 
@@ -20,10 +34,10 @@ const HomePages = () => {
             <div className="flex flex-col gap-10">
 
 
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 flex flex-col">
 
-                    <h1 className="text-2xl font-bold text-gray-800 ">
-                        The Best of entertainment
+                    <h1 className="text-2xl font-bold text-gray-700 tracking-tight py-3">
+                        The Best of Entertainment
                     </h1>
 
                     <Entertainment />
@@ -41,14 +55,14 @@ const HomePages = () => {
 
                         </div>
 
-                        <PosterSlider title="premier" sub="Brand New Release n Friday" images={popular} isDark />
+                        <PosterSlider title="Premiers" sub="Brand New Release every Friday" images={popular} isDark />
 
                     </div>
 
                 </div>
                 <div className="px-4 ">
-                <PosterSlider title="premier" sub="Brand New Release n Friday" images={popular} isDark={false} />
-                <PosterSlider title="premier" sub="Brand New Release n Friday" images={popular} />
+                <PosterSlider title="Upcoming" sub="Ucoming New Release on theater" images={upcoming} isDark={false} />
+                <PosterSlider title="Top Rated" sub="Top Rated Movie " images={topMovie} />
                 </div>
                 
             </div>

@@ -6,7 +6,8 @@ const PlayPage = () => {
     return (
         <>
 
-            <div className="container mx-auto px-4 ">
+          
+           <div className="container mx-auto px-4 ">
                 {/* lg:flex lg:flex-row-reverse */}
                 <div className="w-full lg:flex lg:flex-row-reverse">
                     <div className="w-7/12 ">
@@ -66,6 +67,7 @@ const PlayPage = () => {
 
 
             </div>
+           
         </>
     )
 }
