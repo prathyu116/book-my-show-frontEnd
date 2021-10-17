@@ -15,7 +15,7 @@ const Premier = (props) => {
             <h3 className={` ${props.isDark ? "text-white":"text-gray-700"} text-2xl font-bold tracking-wide`}>{props.title}</h3>
             <p className={` ${props.isDark ? "text-white":"text-gray-700"} text-sm`}>{props.sub}</p>
             </div>
-            <Slider {...settings}>
+            <Slider { ...settings}>
                 
                     {props.images.map((image)=>(
                         <Poster {...image} isDark={props.isDark}/>
